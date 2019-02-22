@@ -1,5 +1,8 @@
 // Angular
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+// ng2-Charts
+import { ChartsModule } from 'ng2-charts';
 // Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -8,6 +11,8 @@ import { PagesComponent } from './pages.component';
 // Modulos
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { GraficoCircularComponent } from '../components/grafico-circular/grafico-circular.component';
 
 
 
@@ -17,6 +22,8 @@ import { PagesRoutingModule } from './pages-routing.module';
     ProgressComponent,
     Graficas1Component,
     PagesComponent,
+    IncrementadorComponent,
+    GraficoCircularComponent
   ],
   exports: [
     DashboardComponent,
@@ -26,7 +33,9 @@ import { PagesRoutingModule } from './pages-routing.module';
   ],
   imports: [
     SharedModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule,
+    ChartsModule,
   ]
 })
 export class PagesModule { }
